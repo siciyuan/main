@@ -62,6 +62,31 @@
     border-radius: 1rem;
 }
 
+/* 手机端悬浮球播放器样式 */
+.md\:hidden .glass-card {
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.md\:hidden .fixed.bottom-6 {
+    transition: all 0.3s ease;
+}
+
+.md\:hidden .scale-0 {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.md\:hidden .scale-100 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.md\:hidden .w-80 {
+    width: 20rem;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .player-container {
@@ -90,6 +115,11 @@
     .player-container .text-xs {
         font-size: 0.625rem;
     }
+    
+    /* 手机端悬浮球调整 */
+    .md\:hidden .w-80 {
+        width: 18rem;
+    }
 }
 
 /* 小屏幕设备进一步优化 */
@@ -111,6 +141,16 @@
     
     .player-container .mb-2 {
         margin-bottom: 0.25rem !important;
+    }
+    
+    /* 手机端悬浮球调整 */
+    .md\:hidden .w-80 {
+        width: 16rem;
+    }
+    
+    .md\:hidden .fixed.bottom-6 {
+        bottom: 1rem;
+        right: 1rem;
     }
 }
 
