@@ -2,7 +2,7 @@
 {
   "site": {
     "title": "鳞游的个人主页",
-    "favicon": "https://img.icons8.com/color/48/000000/code.png"
+    "favicon": "https://m.ccw.site/community/images/logo-ccw.png"
   },
   
   "profile": {
@@ -13,10 +13,10 @@
   },
   
   "contacts": [
-    { "id": 1, "name": "GitHub", "icon": "fab fa-github", "iconType": "fontawesome", "url": "https://github.com" },
+    { "id": 1, "name": "GitHub", "icon": "fab fa-github", "iconType": "fontawesome", "url": "https://github.com/siciyuan" },
     { "id": 2, "name": "Twitter", "icon": "fab fa-twitter", "iconType": "fontawesome", "url": "https://twitter.com" },
-    { "id": 3, "name": "Email", "icon": "fas fa-envelope", "iconType": "fontawesome", "url": "mailto:example@example.com" },
-    { "id": 4, "name": "Blog", "icon": "https://img.icons8.com/color/48/000000/blogger.png", "iconType": "image", "url": "https://blog.example.com" }
+    { "id": 3, "name": "Email", "icon": "fas fa-envelope", "iconType": "fontawesome", "url": "mailto:admin@world123.top" },
+    { "id": 4, "name": "CCW", "icon": "https://m.ccw.site/community/images/logo-ccw.png", "iconType": "image", "url": "https://www.ccw.site/student/65cf41ca4b42321bf8da5ece" }
   ],
   
   "friendLinks": [
