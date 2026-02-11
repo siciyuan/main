@@ -1,0 +1,612 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局变量 */
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #10b981;
+    --background-color: #f3f4f6;
+    --text-color: #1f2937;
+    --glass-opacity: 0.2;
+    --border-radius: 16px;
+    --box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    --transition: all 0.3s ease;
+}
+
+/* 基础样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(90, 92, 106, 0.05) 0%, rgba(32, 45, 58, 0.05) 81.3%),
+        radial-gradient(circle at 90% 80%, rgba(163, 165, 206, 0.05) 0%, rgba(32, 45, 58, 0.05) 81.3%);
+}
+
+/* 容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 玻璃态卡片 */
+.glass-card {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+}
+
+/* 开屏动画 */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+.splash-content .logo {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+.splash-content h1 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* 导航栏 */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-selector {
+    padding: 8px 16px;
+    border-radius: 25px;
+}
+
+.theme-selector select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.theme-selector select option {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+}
+
+/* 英雄区域 */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #6b7280;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero-avatar {
+    flex: 0 0 200px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: var(--primary-color);
+    margin: 0 auto;
+}
+
+/* 章节样式 */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: var(--primary-color);
+}
+
+/* 关于部分 */
+.about-card {
+    padding: 40px;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #4b5563;
+}
+
+.skills h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.skill-item i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+/* 项目部分 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    padding: 30px;
+    text-align: center;
+}
+
+.project-card .project-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.project-card .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+/* 联系部分 */
+.contact-card {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: var(--primary-color);
+    width: 30px;
+    text-align: center;
+}
+
+.social-links {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* 友情链接 */
+.friends-card {
+    padding: 40px;
+}
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.friend-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.friend-item:hover {
+    transform: translateY(-3px);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.friend-item i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.friend-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.friend-item a:hover {
+    color: var(--primary-color);
+}
+
+/* 页脚 */
+footer {
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    /* 导航栏 */
+    .nav-links {
+        display: none;
+    }
+    
+    .theme-selector {
+        padding: 6px 12px;
+    }
+    
+    .theme-selector select {
+        font-size: 14px;
+    }
+    
+    /* 英雄区域 */
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .hero-avatar {
+        order: -1;
+    }
+    
+    /* 联系部分 */
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* 友情链接 */
+    .friends-card {
+        padding: 30px 20px;
+    }
+    
+    .friend-item {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    /* 通用 */
+    .section {
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 英雄区域 */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* 关于部分 */
+    .about-card {
+        padding: 30px 20px;
+    }
+    
+    .skill-item {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    /* 项目部分 */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        padding: 25px;
+    }
+    
+    /* 联系部分 */
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    /* 友情链接 */
+    .friend-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    /* 通用 */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
