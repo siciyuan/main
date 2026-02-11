@@ -35,9 +35,9 @@
   ],
   
   "playlist": [
-    { "id": 1, "title": "夏日微风", "artist": "轻音乐乐团", "duration": 180, "cover": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "audio/summer-breeze.mp3" },
-    { "id": 2, "title": "星辰大海", "artist": "宇宙之声", "duration": 240, "cover": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "audio/stars-ocean.mp3" },
-    { "id": 3, "title": "森林之语", "artist": "自然之声", "duration": 210, "cover": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "audio/forest-whisper.mp3" }
+    { "id": 1, "title": "随机歌曲", "artist": "测试1", "duration": 180, "cover": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2024/01/20/audio_bb461c7ea3.mp3" },
+    { "id": 2, "title": "随机歌曲", "artist": "测试2", "duration": 240, "cover": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2024/01/20/audio_fe5f42f5ba.mp3" },
+    { "id": 3, "title": "随机歌曲", "artist": "测试3", "duration": 210, "cover": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2023/09/27/audio_ac0e03a27a.mp3" }
   ],
   
   "themes": [
