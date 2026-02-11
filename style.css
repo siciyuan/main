@@ -95,7 +95,58 @@
     }
     
     .floating-player {
-        padding: 1rem;
+        padding: 0.75rem;
+    }
+    
+    /* 播放器移动端适配 */
+    .player-container .floating-player .flex-col {
+        align-items: flex-start;
+    }
+    
+    /* 当前播放信息 */
+    .player-container .flex.items-center.space-x-4 {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .player-container .flex.items-center.space-x-4 img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* 播放控制 */
+    .player-container .flex.items-center.space-x-6 {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+    }
+    
+    .player-container .flex.items-center.space-x-6 button {
+        padding: 0.5rem;
+    }
+    
+    .player-container .flex.items-center.space-x-6 .w-10 {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* 播放列表 */
+    .player-container .relative .absolute {
+        width: calc(100vw - 2rem);
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+    
+    /* 进度条 */
+    .player-container .hidden.md\:block {
+        display: block;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .player-container .hidden.md\:block .w-64 {
+        width: 100%;
     }
 }
 
