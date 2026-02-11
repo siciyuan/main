@@ -13,42 +13,42 @@ const MusicPlayer = {
                 <div class="container mx-auto max-w-6xl">
                     <div class="flex flex-col md:flex-row items-center justify-between">
                         <!-- 当前播放 -->
-                        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                        <div class="flex items-center space-x-4 mb-4 md:mb-0 w-full md:w-auto">
                             <img 
                                 :src="currentTrack.cover" 
                                 alt="专辑封面"
-                                class="w-12 h-12 rounded-lg"
+                                class="w-12 h-12 md:w-12 md:h-12 rounded-lg"
                             >
-                            <div>
-                                <h4 class="font-medium">{{ currentTrack.title }}</h4>
-                                <p class="text-sm opacity-80">{{ currentTrack.artist }}</p>
+                            <div class="flex-1">
+                                <h4 class="font-medium text-sm md:text-base truncate">{{ currentTrack.title }}</h4>
+                                <p class="text-xs md:text-sm opacity-80 truncate">{{ currentTrack.artist }}</p>
                             </div>
                         </div>
                         
                         <!-- 播放控制 -->
-                        <div class="flex items-center space-x-6">
-                            <button @click="prevTrack" class="hover:text-white/80">
+                        <div class="flex items-center space-x-4 md:space-x-6 w-full md:w-auto justify-between md:justify-center">
+                            <button @click="prevTrack" class="hover:text-white/80 p-2">
                                 <i class="fas fa-step-backward text-lg"></i>
                             </button>
                             <button @click="togglePlay" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                                 <i v-if="isPlaying" class="fas fa-pause"></i>
                                 <i v-else class="fas fa-play"></i>
                             </button>
-                            <button @click="nextTrack" class="hover:text-white/80">
+                            <button @click="nextTrack" class="hover:text-white/80 p-2">
                                 <i class="fas fa-step-forward text-lg"></i>
                             </button>
                             
                             <!-- 播放列表 -->
                             <div class="relative">
-                                <button @click="showPlaylist = !showPlaylist" class="flex items-center space-x-2 hover:text-white/80">
+                                <button @click="showPlaylist = !showPlaylist" class="flex items-center space-x-2 hover:text-white/80 p-2">
                                     <i class="fas fa-list"></i>
-                                    <span>播放列表</span>
+                                    <span class="hidden sm:inline">播放列表</span>
                                 </button>
                                 
                                 <!-- 播放列表下拉 -->
                                 <div 
                                     v-if="showPlaylist" 
-                                    class="absolute bottom-full right-0 mb-2 w-64 max-h-80 overflow-y-auto glass-card rounded-xl p-2"
+                                    class="absolute bottom-full right-0 mb-2 w-64 sm:w-72 max-h-80 overflow-y-auto glass-card rounded-xl p-2"
                                 >
                                     <div 
                                         v-for="(track, index) in playlist" 
@@ -59,8 +59,8 @@ const MusicPlayer = {
                                     >
                                         <img :src="track.cover" class="w-10 h-10 rounded" alt="封面">
                                         <div class="flex-1">
-                                            <h4 class="font-medium text-sm">{{ track.title }}</h4>
-                                            <p class="text-xs opacity-80">{{ track.artist }}</p>
+                                            <h4 class="font-medium text-sm truncate">{{ track.title }}</h4>
+                                            <p class="text-xs opacity-80 truncate">{{ track.artist }}</p>
                                         </div>
                                         <i v-if="index === currentTrackIndex && isPlaying" class="fas fa-volume-up"></i>
                                     </div>
@@ -79,6 +79,20 @@ const MusicPlayer = {
                                     ></div>
                                 </div>
                                 <span class="text-sm">{{ formatTime(duration) }}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 移动端进度条 -->
+                        <div class="w-full mt-3 md:hidden">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs">{{ formatTime(currentTime) }}</span>
+                                <div class="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                                    <div 
+                                        class="h-full bg-white/70 rounded-full"
+                                        :style="{width: progress + '%'}"
+                                    ></div>
+                                </div>
+                                <span class="text-xs">{{ formatTime(duration) }}</span>
                             </div>
                         </div>
                     </div>
