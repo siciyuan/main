@@ -1,20 +1,20 @@
 
 {
   "site": {
-    "title": "鳞游的个人主页",
+    "title": "AAA鳞游SCROAM的个人主页",
     "favicon": "https://m.ccw.site/community/images/logo-ccw.png"
   },
   
   "profile": {
-    "name": "张明",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "name": "AAA鳞游SCROAM",
+    "avatar": "https://m.ccw.site/user_projects_assets/b69b283d-c243-492c-a2d3-2b84e4275605.jpg?x-oss-process=image%2Fresize%2Cs_150%2Fformat%2Cwebp",
     "bio": "全栈开发者 | 开源爱好者 | 技术博客作者",
     "about": "我是一名热爱技术的全栈开发者，专注于Web开发和用户体验设计。喜欢探索新技术，分享知识，参与开源项目。我相信技术可以改变世界，让生活变得更美好。"
   },
   
   "contacts": [
     { "id": 1, "name": "GitHub", "icon": "fab fa-github", "iconType": "fontawesome", "url": "https://github.com/siciyuan" },
-    { "id": 2, "name": "Twitter", "icon": "fab fa-twitter", "iconType": "fontawesome", "url": "https://twitter.com" },
+    { "id": 2, "name": "GITEE", "icon": "https://gitee.com/favicon.ico", "iconType": "image", "url": "https://gitee.com/scroam" },
     { "id": 3, "name": "Email", "icon": "fas fa-envelope", "iconType": "fontawesome", "url": "mailto:admin@world123.top" },
     { "id": 4, "name": "CCW", "icon": "https://m.ccw.site/community/images/logo-ccw.png", "iconType": "image", "url": "https://www.ccw.site/student/65cf41ca4b42321bf8da5ece" }
   ],
