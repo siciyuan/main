@@ -36,14 +36,14 @@
         <!-- 主内容区域 -->
         <main class="container mx-auto px-4 py-8 max-w-6xl">
             <!-- 个人资料卡片 -->
-            <section class="glass-card rounded-2xl p-8 mb-8" v-if="config.profile">
+            <section class="glass-card rounded-2xl p-8 mb-8 scroll-reveal" v-if="config.profile">
                 <div class="flex flex-col md:flex-row items-center">
                     <!-- 头像 -->
-                    <div class="mb-6 md:mb-0 md:mr-8">
+                    <div class="mb-6 md:mb-0 md:mr-8 float">
                         <img 
                             :src="config.profile.avatar" 
                             alt="头像"
-                            class="w-32 h-32 rounded-full border-4 border-white/30 object-cover"
+                            class="w-32 h-32 rounded-full border-4 border-white/30 object-cover pulse-light"
                         >
                     </div>
                     
@@ -73,7 +73,7 @@
             <!-- 主要内容区域 -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- 关于我 -->
-                <section class="glass-card rounded-2xl p-6 lg:col-span-2" v-if="config.profile">
+                <section class="glass-card rounded-2xl p-6 lg:col-span-2 scroll-reveal" v-if="config.profile">
                     <h2 class="text-2xl font-bold mb-4">关于我</h2>
                     <p class="opacity-90 leading-relaxed">{{ config.profile.about }}</p>
                     
@@ -94,7 +94,7 @@
                 </section>
                 
                 <!-- 友情链接 -->
-                <section class="glass-card rounded-2xl p-6" v-if="config.friendLinks">
+                <section class="glass-card rounded-2xl p-6 scroll-reveal" v-if="config.friendLinks">
                     <h2 class="text-2xl font-bold mb-4">友情链接</h2>
                     <div class="space-y-4">
                         <a 
