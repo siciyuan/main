@@ -29,7 +29,7 @@
   ],
   
   "quickLinks": [
-    { "id": 1, "name": "我的作品集", "url": "#" },
+    { "id": 1, "name": "我的作品集", "url": "portfolio/" },
     { "id": 2, "name": "技术文章", "url": "#" },
     { "id": 3, "name": "开源项目", "url": "#" },
     { "id": 4, "name": "联系我", "url": "#" }
@@ -54,15 +54,15 @@
   ],
   
   "footer": {
-    "copyright": "© 2026 鳞游. 保留所有权利.",
-    "extraInfo": "由Vue与Tailwind CSS 构建",
-    "links": [
-      { "id": 1, "name": "隐私政策", "url": "#" },
-      { "id": 2, "name": "使用条款", "url": "#" },
-      { "id": 3, "name": "站点地图", "url": "#" },
-      { "id": 4, "name": "友情链接", "url": "#" }
-    ]
-  },
+        "copyright": "© 2026 鳞游. 保留所有权利.",
+        "extraInfo": "由Vue与Tailwind CSS 构建 | 本页面后端由 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>小鸡云</a> 提供 | 我日常玩的免费mc服务器就在这开的 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>点击查看</a>",
+        "links": [
+            { "id": 1, "name": "隐私政策", "url": "#" },
+            { "id": 2, "name": "使用条款", "url": "#" },
+            { "id": 3, "name": "站点地图", "url": "#" },
+            { "id": 4, "name": "友情链接", "url": "#" }
+        ]
+    },
   
   "settings": {
     "defaultTheme": "water",
