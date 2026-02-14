@@ -126,99 +126,117 @@
     <script src="../theme-manager.js"></script>
     <script src="../effects.js"></script>
     <script>
-        // 加载作品集配置
-        const loadPortfolioConfig = async () => {
-            try {
-                const response = await fetch('config.json');
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('加载作品集配置失败:', error);
-                return {
-                    portfolio: {
-                        title: '我的作品集',
-                        description: '加载配置失败'
-                    },
-                    projects: []
-                };
-            }
-        };
-        
-        // 加载主配置
-        const loadMainConfig = async () => {
-            try {
-                const response = await fetch('../config.json');
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('加载主配置失败:', error);
-                return {
-                    themes: [],
-                    settings: {
-                        defaultTheme: 'water',
-                        enableParticles: true
-                    },
-                    footer: {
-                        copyright: '© 2026 鳞游. 保留所有权利.',
-                        extraInfo: '由Vue与Tailwind CSS 构建',
-                        links: []
-                    }
-                };
-            }
-        };
-        
         // 创建作品集Vue应用
         const { createApp, onMounted, reactive } = Vue;
         
         createApp({
             setup() {
-                const config = reactive({});
-                const portfolioConfig = reactive({});
+                const config = reactive({
+                    themes: [
+                        { "id": "light", "name": "亮白", "color": "#f8fafc", "bg": "#f1f5f9", "text": "#475569" },
+                        { "id": "graphite", "name": "石墨黑", "color": "#64748b", "bg": "#1e293b", "text": "#e2e8f0" },
+                        { "id": "lime", "name": "青柠", "color": "#a3e635", "bg": "#fefce8", "text": "#4d7c0f" },
+                        { "id": "lemon", "name": "柠黄", "color": "#fde68a", "bg": "#fffbeb", "text": "#a16207" },
+                        { "id": "apple", "name": "苹果绿", "color": "#4ade80", "bg": "#f0fdf4", "text": "#166534" },
+                        { "id": "water", "name": "水蓝", "color": "#60a5fa", "bg": "#eff6ff", "text": "#1e40af" },
+                        { "id": "cherry", "name": "樱红", "color": "#fda4af", "bg": "#fef2f2", "text": "#9f1239" },
+                        { "id": "lavender", "name": "薰衣草紫", "color": "#c4b5fd", "bg": "#faf5ff", "text": "#6b21a8" }
+                    ],
+                    settings: {
+                        defaultTheme: "water",
+                        enableParticles: true
+                    },
+                    footer: {
+                        copyright: "© 2026 鳞游. 保留所有权利.",
+                        extraInfo: "由Vue与Tailwind CSS 构建 | 本页面后端由 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>小鸡云</a> 提供 | 我日常玩的免费mc服务器就在这开的 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>点击查看</a>",
+                        links: [
+                            { "id": 1, "name": "隐私政策", "url": "#" },
+                            { "id": 2, "name": "使用条款", "url": "#" },
+                            { "id": 3, "name": "站点地图", "url": "#" },
+                            { "id": 4, "name": "友情链接", "url": "#" }
+                        ]
+                    }
+                });
+                
+                const portfolioConfig = reactive({
+                    portfolio: {
+                        title: "我的作品集",
+                        description: "展示我的项目作品和技术成果"
+                    },
+                    projects: [
+                        {
+                            "id": 1,
+                            "title": "个人主页",
+                            "description": "使用Vue和Tailwind CSS构建的个人主页，支持主题切换和音乐播放功能",
+                            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                            "category": "Web开发",
+                            "technologies": ["Vue", "Tailwind CSS", "JavaScript"],
+                            "url": "#",
+                            "github": "https://github.com/siciyuan"
+                        },
+                        {
+                            "id": 2,
+                            "title": "技术博客系统",
+                            "description": "基于Node.js和MongoDB的个人技术博客系统，支持Markdown编辑和主题切换",
+                            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                            "category": "全栈开发",
+                            "technologies": ["Node.js", "MongoDB", "Express"],
+                            "url": "#",
+                            "github": "https://github.com/siciyuan"
+                        },
+                        {
+                            "id": 3,
+                            "title": "数据分析工具",
+                            "description": "使用Python和D3.js开发的数据分析和可视化工具，支持多种数据格式导入",
+                            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                            "category": "数据科学",
+                            "technologies": ["Python", "D3.js", "Pandas"],
+                            "url": "#",
+                            "github": "https://github.com/siciyuan"
+                        },
+                        {
+                            "id": 4,
+                            "title": "移动应用原型",
+                            "description": "使用Figma设计的移动应用原型，包含用户界面和交互设计",
+                            "image": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                            "category": "UI/UX设计",
+                            "technologies": ["Figma", "UI设计", "UX设计"],
+                            "url": "#",
+                            "github": "https://github.com/siciyuan"
+                        }
+                    ]
+                });
+                
                 const themeManager = new ThemeManager();
                 
-                // 加载配置
-                const loadConfig = async () => {
-                    try {
-                        // 加载主配置
-                        const mainData = await loadMainConfig();
-                        Object.assign(config, mainData);
-                        
-                        // 初始化主题
-                        if (mainData.settings?.defaultTheme) {
-                            themeManager.init(mainData.themes, mainData.settings.defaultTheme);
+                // 初始化主题
+                if (config.settings?.defaultTheme) {
+                    themeManager.init(config.themes, config.settings.defaultTheme);
+                }
+                
+                // 初始化粒子效果
+                if (config.settings?.enableParticles) {
+                    setTimeout(() => themeManager.initParticles(), 100);
+                }
+                
+                // 滚动动画逻辑
+                const handleScroll = () => {
+                    const elements = document.querySelectorAll('.scroll-reveal');
+                    elements.forEach(element => {
+                        const elementTop = element.getBoundingClientRect().top;
+                        const elementVisible = 150;
+                        if (elementTop < window.innerHeight - elementVisible) {
+                            element.classList.add('active');
                         }
-                        
-                        // 初始化粒子效果
-                        if (mainData.settings?.enableParticles) {
-                            setTimeout(() => themeManager.initParticles(), 100);
-                        }
-                        
-                        // 加载作品集配置
-                        const portfolioData = await loadPortfolioConfig();
-                        Object.assign(portfolioConfig, portfolioData);
-                    } catch (error) {
-                        console.error('加载配置失败:', error);
-                    }
+                    });
                 };
                 
                 onMounted(() => {
-                    loadConfig();
-                    
-                    // 滚动动画逻辑
-                    const handleScroll = () => {
-                        const elements = document.querySelectorAll('.scroll-reveal');
-                        elements.forEach(element => {
-                            const elementTop = element.getBoundingClientRect().top;
-                            const elementVisible = 150;
-                            if (elementTop < window.innerHeight - elementVisible) {
-                                element.classList.add('active');
-                            }
-                        });
-                    };
-                    
-                    window.addEventListener('scroll', handleScroll);
-                    // 初始加载时触发一次
+                    // 初始加载时触发一次滚动动画
                     handleScroll();
+                    
+                    // 监听滚动事件
+                    window.addEventListener('scroll', handleScroll);
                 });
                 
                 return {
