@@ -348,17 +348,24 @@
                     // 尝试所有API地址
                     for (const apiUrl of apiUrls) {
                         try {
+                            console.log('Attempting to submit form to:', apiUrl);
+                            
                             // 提交表单数据到API
                             const response = await fetch(apiUrl, {
                                 method: 'POST',
                                 mode: 'cors',
+                                credentials: 'omit',
                                 headers: {
                                     'Content-Type': 'application/json'
                                 },
                                 body: JSON.stringify(formData)
                             });
                             
+                            console.log('Response status:', response.status);
+                            console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+                            
                             const result = await response.json();
+                            console.log('Response data:', result);
                             
                             if (result.status === 'success') {
                                 formSubmitted.value = true;
@@ -376,6 +383,7 @@
                                 break;
                             } else {
                                 errorMessage = '提交失败: ' + result.message;
+                                console.log('API returned error:', errorMessage);
                             }
                         } catch (error) {
                             console.error('Error submitting form to', apiUrl, ':', error);
