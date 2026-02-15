@@ -29,10 +29,10 @@
   ],
   
   "quickLinks": [
-    { "id": 1, "name": "我的作品集", "url": "portfolio/" },
-    { "id": 2, "name": "技术文章", "url": "articles/" },
-    { "id": 3, "name": "开源项目", "url": "projects/" },
-    { "id": 4, "name": "联系我", "url": "contact/" }
+    { "id": 1, "name": "我的作品集", "url": "portfolio/index.html" },
+    { "id": 2, "name": "技术文章", "url": "articles/index.html" },
+    { "id": 3, "name": "开源项目", "url": "projects/index.html" },
+    { "id": 4, "name": "联系我", "url": "contact/index.html" }
   ],
   
   "playlist": [
