@@ -318,12 +318,14 @@ createApp({
                     initEffects(data.coreValues, data.themes || [], themeManager.currentTheme);
                 }
                 
+                return Promise.resolve();
             } catch (error) {
                 console.error('加载配置失败:', error);
                 // 使用默认配置
                 Object.assign(config, {
                     profile: { name: '个人主页', bio: '加载配置失败', about: '请检查config.json文件' }
                 });
+                return Promise.resolve();
             }
         };
         
@@ -471,6 +473,30 @@ createApp({
             }).catch((error) => {
                 console.error('字体加载失败:', error);
             });
+        };
+        
+        // Font Awesome 懒加载函数
+        const loadFontAwesome = () => {
+            console.log('开始加载 Font Awesome...');
+            // 创建 link 元素
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            link.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
+            link.crossOrigin = 'anonymous';
+            
+            // 监听加载完成事件
+            link.onload = () => {
+                console.log('Font Awesome 加载成功');
+            };
+            
+            // 监听加载错误事件
+            link.onerror = () => {
+                console.error('Font Awesome 加载失败');
+            };
+            
+            // 添加到 head 元素
+            document.head.appendChild(link);
         };
         
         // 特效管理方法
@@ -637,7 +663,12 @@ createApp({
             loadPoem();
             
             // 然后加载配置
-            loadConfig();
+            loadConfig().then(() => {
+                // 配置加载完成后，延迟加载 Font Awesome
+                setTimeout(() => {
+                    loadFontAwesome();
+                }, 500);
+            });
             
             // 滚动动画逻辑
             const handleScroll = () => {
