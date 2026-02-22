@@ -1,0 +1,80 @@
+
+{
+  "site": {
+    "title": "鳞游の小窝",
+    "favicon": "logo.ico"
+  },
+  
+  "profile": {
+    "name": "AAA鳞游SCROAM",
+    "avatar": "https://m.ccw.site/user_projects_assets/b69b283d-c243-492c-a2d3-2b84e4275605.jpg?x-oss-process=image%2Fresize%2Cs_150%2Fformat%2Cwebp",
+    "bio": "全栈开发者 | 开源爱好者 | 技术博客作者",
+    "about": "我是一名热爱技术的全栈开发者，专注于Web开发和用户体验设计。喜欢探索新技术，分享知识，参与开源项目。我相信技术可以改变世界，让生活变得更美好。"
+  },
+  
+  "contacts": [
+    { "id": 1, "name": "GitHub", "icon": "fab fa-github", "iconType": "fontawesome", "url": "https://github.com/siciyuan" },
+    { "id": 2, "name": "GITEE", "icon": "https://gitee.com/favicon.ico", "iconType": "image", "url": "https://gitee.com/scroam" },
+    { "id": 3, "name": "Email", "icon": "fas fa-envelope", "iconType": "fontawesome", "url": "mailto:admin@world123.top" },
+    { "id": 4, "name": "CCW", "icon": "https://m.ccw.site/community/images/logo-ccw.png", "iconType": "image", "url": "https://www.ccw.site/student/65cf41ca4b42321bf8da5ece" },
+    { "id": 5, "name": "BILIBILI", "icon": "bilibili-favicon.ico", "iconType": "image", "url": "https://space.bilibili.com/385463410" },
+    { "id": 6, "name": "QQ", "icon": "fab fa-qq", "iconType": "fontawesome", "url": "tencent://message/?uin=1493216423&Site=&Menu=yes" }
+
+  ],
+  
+  "friendLinks": [
+    { "id": 1, "name": "Alice的技术博客", "description": "前端开发", "icon": "fab fa-react", "iconType": "fontawesome", "url": "https://example.com" },
+    { "id": 2, "name": "Bob的设计工坊", "description": "UI/UX设计", "icon": "fab fa-figma", "iconType": "fontawesome", "url": "https://example.com" },
+    { "id": 3, "name": "A.C·TD（狙宿/宿长）的个人主页", "description": "开发者主页", "icon": "https://m.ccw.site/avatar/87fa8782-68ff-4f6e-b225-7595e29171f6.png?x-oss-process=image%2Fresize%2Cs_150%2Fformat%2Cwebp", "iconType": "image", "url": "https://www.ccw.site/student/63ef2da0e77d1a05041bd28a" }
+  ],
+  
+  "quickLinks": [
+    { "id": 1, "name": "我的作品集", "url": "portfolio/index.html" },
+    { "id": 2, "name": "技术文章", "url": "articles/index.html" },
+    { "id": 3, "name": "开源项目", "url": "projects/index.html" },
+    { "id": 4, "name": "联系我", "url": "contact/index.html" }
+  ],
+  
+  "playlist": [
+    { "id": 1, "title": "随机歌曲", "artist": "测试1", "duration": 180, "cover": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2024/01/20/audio_bb461c7ea3.mp3" },
+    { "id": 2, "title": "随机歌曲", "artist": "测试2", "duration": 240, "cover": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2024/01/20/audio_fe5f42f5ba.mp3" },
+    { "id": 3, "title": "随机歌曲", "artist": "测试3", "duration": 210, "cover": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", "audio": "https://cdn.pixabay.com/audio/2023/09/27/audio_ac0e03a27a.mp3" }
+  ],
+  
+  
+  "themes": [
+    { "id": "light", "name": "亮白", "color": "#f8fafc", "bg": "#f1f5f9", "text": "#475569" },
+    { "id": "graphite", "name": "石墨黑", "color": "#64748b", "bg": "#1e293b", "text": "#e2e8f0" },
+    { "id": "lime", "name": "青柠", "color": "#a3e635", "bg": "#fefce8", "text": "#4d7c0f" },
+    { "id": "lemon", "name": "柠黄", "color": "#fde68a", "bg": "#fffbeb", "text": "#a16207" },
+    { "id": "apple", "name": "苹果绿", "color": "#4ade80", "bg": "#f0fdf4", "text": "#166534" },
+    { "id": "water", "name": "水蓝", "color": "#60a5fa", "bg": "#eff6ff", "text": "#1e40af" },
+    { "id": "cherry", "name": "樱红", "color": "#fda4af", "bg": "#fef2f2", "text": "#9f1239" },
+    { "id": "lavender", "name": "薰衣草紫", "color": "#c4b5fd", "bg": "#faf5ff", "text": "#6b21a8" }
+  ],
+  
+  "footer": {
+        "copyright": "© 2026 鳞游. 保留所有权利.",
+        "extraInfo": "由Vue与Tailwind CSS 构建 | 本页面后端由 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>小鸡云</a> 提供 | 我日常玩的免费mc服务器就在这开的 <a href='https://www.xiaojiyun.com/aff/WPNPVVXD' target='_blank'>点击查看</a>",
+        "links": [
+            { "id": 1, "name": "隐私政策", "url": "#" },
+            { "id": 2, "name": "使用条款", "url": "#" },
+            { "id": 3, "name": "站点地图", "url": "#" },
+            { "id": 4, "name": "友情链接", "url": "#" }
+        ]
+    },
+  
+  "settings": {
+    "defaultTheme": "water",
+    "enableParticles": true,
+    "enableMusicPlayer": true,
+    "enableClickEffects": true
+  },
+  
+  "coreValues": [
+    "富强", "民主", "文明", "和谐",
+    "自由", "平等", "公正", "法治",
+    "爱国", "敬业", "诚信", "友善"
+  ]
+}
+
