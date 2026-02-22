@@ -1,0 +1,48 @@
+{
+  "contact": {
+    "title": "联系我",
+    "description": "如果您有任何问题或合作意向，欢迎随时联系我",
+    "form": {
+      "name": {
+        "label": "姓名",
+        "placeholder": "请输入您的姓名",
+        "required": true
+      },
+      "email": {
+        "label": "邮箱",
+        "placeholder": "请输入您的邮箱",
+        "required": true
+      },
+      "subject": {
+        "label": "主题",
+        "placeholder": "请输入消息主题",
+        "required": true
+      },
+      "message": {
+        "label": "消息",
+        "placeholder": "请输入您的消息",
+        "required": true
+      },
+      "submit": {
+        "label": "发送消息"
+      }
+    }
+  },
+  "info": {
+    "email": "admin@world123.top",
+    "phone": "+86 150 6267 XXXX(你猜呢？）",
+    "address": "我就问不在Earth我在哪？",
+    "social": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/siciyuan",
+        "icon": "fab fa-github"
+      },
+      {
+        "name": "WeChat",
+        "url": "#",
+        "icon": "fab fa-weixin"
+      }
+    ]
+  }
+}
