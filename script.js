@@ -460,13 +460,13 @@ createApp({
                 // 添加字体到字体族
                 document.fonts.add(font);
                 
-                // 更新所有元素的字体样式
+                // 更新所有元素的字体样式，但排除Font Awesome图标
                 document.documentElement.style.fontFamily = 'CustomFont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif';
                 document.body.style.fontFamily = 'CustomFont, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif';
                 
-                // 添加一个样式规则，确保优先级
+                // 添加一个样式规则，确保优先级，同时排除Font Awesome图标
                 const style = document.createElement('style');
-                style.textContent = '* { font-family: "CustomFont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important; }';
+                style.textContent = '*:not(.fa):not(.fas):not(.far):not(.fal):not(.fad):not(.fab):not(.fa-classic):not(.fa-regular):not(.fa-solid) { font-family: "CustomFont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important; }';
                 document.head.appendChild(style);
                 
                 console.log('字体应用成功');
