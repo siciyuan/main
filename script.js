@@ -488,11 +488,11 @@ createApp({
             // 监听加载完成事件
             link.onload = () => {
                 console.log('Font Awesome 加载成功');
-                // 添加一个样式规则，确保 Font Awesome 字体族的优先级
+                // 添加一个样式规则，确保 Font Awesome 字体族的优先级，包括播放器中的图标
                 const style = document.createElement('style');
-                style.textContent = '.fa, .fas, .far, .fal, .fad, .fab { font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important; font-weight: 400 !important; }';
+                style.textContent = '.fa, .fas, .far, .fal, .fad, .fab, .player-container .fa, .player-container .fas, .player-container .far, .player-container .fal, .player-container .fad, .player-container .fab { font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important; font-weight: 400 !important; }';
                 document.head.appendChild(style);
-                console.log('Font Awesome 字体族优先级已设置');
+                console.log('Font Awesome 字体族优先级已设置，包括播放器中的图标');
             };
             
             // 监听加载错误事件
